@@ -1,0 +1,1 @@
+This is the directory for the PNG files used in the project.
