@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/Go.png</file>
+        <file>img/lap.png</file>
+        <file>img/reset.png</file>
+        <file>img/Stop.png</file>
+        <file>img/clock.png</file>
+    </qresource>
+</RCC>
