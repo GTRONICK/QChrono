@@ -27,12 +27,8 @@ MainWindow::MainWindow(QWidget *parent) :
     font.setPointSize(48);
     ui->gobLCD->setFont(font);
 
-    int id_condensed = QFontDatabase::addApplicationFont(":/fonts/fonts/em_rockwell-condensed.ttf");
-    QFont font_condensed;
-    QString family_condensed = QFontDatabase::applicationFontFamilies(id_condensed).at(0);
-    font_condensed.setFamily(family_condensed);
-    font_condensed.setPointSize(36);
-    ui->gobLapTextArea->setFont(font_condensed);
+    font.setPointSize(36);
+    ui->gobLapTextArea->setFont(font);
 
     workerThread.start();
     this->statusBar()->showMessage(tr("www.gtronick.com"));
