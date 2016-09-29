@@ -20,14 +20,14 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&workerThread, SIGNAL (finished()), &workerThread, SLOT (deleteLater()));
     this->setWindowFlags(Qt::WindowStaysOnTopHint);
 
-    int id = QFontDatabase::addApplicationFont(":/fonts/fonts/embeed_rockwell.ttf");
+    int id = QFontDatabase::addApplicationFont(":/fonts/fonts/em_rockwell.ttf");
     QFont font;
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     font.setFamily(family);
     font.setPointSize(48);
     ui->gobLCD->setFont(font);
 
-    int id_condensed = QFontDatabase::addApplicationFont(":/fonts/fonts/embeed_rockwell-condensed.ttf");
+    int id_condensed = QFontDatabase::addApplicationFont(":/fonts/fonts/em_rockwell-condensed.ttf");
     QFont font_condensed;
     QString family_condensed = QFontDatabase::applicationFontFamilies(id_condensed).at(0);
     font_condensed.setFamily(family_condensed);
