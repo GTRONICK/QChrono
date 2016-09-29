@@ -35,7 +35,7 @@ void Worker::launchChrono()
     }
 
     emit(resultReady(QString("%3:%2:%1")
-            .arg(milis,3,10,QLatin1Char('0'))
+            .arg(milis/10,2,10,QLatin1Char('0'))
             .arg(seconds,2,10,QLatin1Char('0'))
             .arg(minutes,2,10,QLatin1Char('0'))));
 
