@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&workerThread, SIGNAL (finished()), &workerThread, SLOT (deleteLater()));
     this->setWindowFlags(Qt::WindowStaysOnTopHint);
     workerThread.start();
-    this->statusBar()->showMessage(tr("Visit www.gtronick.com"));
+    this->statusBar()->showMessage(tr("www.gtronick.com"));
 }
 
 MainWindow::~MainWindow()
@@ -49,7 +49,7 @@ void MainWindow::on_startButton_clicked()
 
 void MainWindow::on_resetButton_clicked()
 {
-    ui->gobLCD->setText("00:00:000");
+    ui->gobLCD->setText("00:00:00");
     emit(resetChrono());
 }
 
