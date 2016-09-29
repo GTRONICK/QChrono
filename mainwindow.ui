@@ -99,7 +99,7 @@ color: rgb(85, 255, 0);</string>
         <item>
          <widget class="QPushButton" name="clearLapsButton">
           <property name="text">
-           <string>Clear laps</string>
+           <string>&amp;Clear laps</string>
           </property>
          </widget>
         </item>
@@ -125,7 +125,7 @@ color: rgb(85, 255, 0);</string>
           <item>
            <widget class="QPushButton" name="flagButton">
             <property name="text">
-             <string>Lap</string>
+             <string>&amp;Lap</string>
             </property>
             <property name="icon">
              <iconset resource="icons.qrc">
@@ -142,7 +142,7 @@ color: rgb(85, 255, 0);</string>
           <item>
            <widget class="QPushButton" name="resetButton">
             <property name="text">
-             <string>Reset</string>
+             <string>&amp;Reset</string>
             </property>
             <property name="icon">
              <iconset resource="icons.qrc">
