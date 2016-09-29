@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>329</width>
-    <height>294</height>
+    <width>315</width>
+    <height>292</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@
          </font>
         </property>
         <property name="text">
-         <string>  min      :     sec      :        millisec </string>
+         <string>  min          :     sec       :       millisec </string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -54,7 +54,7 @@
          <enum>QFrame::NoFrame</enum>
         </property>
         <property name="text">
-         <string>00:00:000</string>
+         <string>00:00:00</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
