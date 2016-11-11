@@ -7,7 +7,7 @@ QChrono, is a simple QT application that serves as a chronometer with lap captur
 
 1. Download the source code and images.
 2. Extract the files and run:
-3. qmake
+3. qmake TestJQ.pro
 4. make all -j4
 5. You will find a QChrono executable.
 
