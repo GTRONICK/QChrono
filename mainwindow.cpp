@@ -20,16 +20,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&workerThread, SIGNAL (finished()), &workerThread, SLOT (deleteLater()));
     this->setWindowFlags(Qt::WindowStaysOnTopHint);
 
-    int id = QFontDatabase::addApplicationFont(":/fonts/fonts/em_rockwell.ttf");
-    QFont font;
-    QString family = QFontDatabase::applicationFontFamilies(id).at(0);
-    font.setFamily(family);
-    font.setPointSize(48);
-    ui->gobLCD->setFont(font);
-
-    font.setPointSize(36);
-    ui->gobLapTextArea->setFont(font);
-
     workerThread.start();
     this->statusBar()->showMessage(tr("www.gtronick.com"));
 }
