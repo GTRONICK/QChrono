@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>315</width>
-    <height>292</height>
+    <height>294</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@
          </font>
         </property>
         <property name="text">
-         <string>  min          :     sec       :       millisec </string>
+         <string>    min        :       sec     :   1/100 sec</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
