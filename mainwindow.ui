@@ -2,12 +2,15 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>315</width>
-    <height>294</height>
+    <height>330</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,6 +23,182 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetFixedSize</enum>
+        </property>
+        <item>
+         <widget class="QPushButton" name="closeWindowButton">
+          <property name="minimumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{ 
+	background-color: rgb(255, 96, 89);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(225, 71, 64);
+}
+QPushButton:hover{ 
+	background-color: rgb(240, 0, 0);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(225, 71, 64);
+}
+QPushButton:pressed{ 
+	background-color: rgb(220, 0, 0);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(225, 71, 64);
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="restoreWindowButton_2">
+          <property name="minimumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{ 
+	background-color:rgb(255, 189, 46);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(223, 161, 35);
+}
+QPushButton:hover{ 
+	background-color: rgb(255, 255, 0);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(223, 161, 35);
+}
+QPushButton:pressed{ 
+	background-color: rgb(100, 100, 0);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(223, 161, 35);
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="restoreWindowButton">
+          <property name="minimumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{ 
+	background-color: rgb(41, 206, 66);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(37, 204, 62);
+}
+QPushButton:hover{ 
+	background-color: rgb(0, 255, 0);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(37, 204, 62);
+}
+QPushButton:pressed{ 
+	background-color: rgb(40, 200, 50);
+	border-radius:7;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(37, 204, 62);
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="windowTittleLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>QChrono</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+        <property name="margin">
+         <number>1</number>
+        </property>
+        <property name="indent">
+         <number>-1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QLabel" name="label">
@@ -32,7 +211,7 @@
          </font>
         </property>
         <property name="text">
-         <string>    min        :       sec     :   1/100 sec</string>
+         <string>       min     :      sec      :     1/100    </string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -63,7 +242,7 @@
       </item>
      </layout>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QPlainTextEdit" name="gobLapTextArea">
@@ -108,7 +287,7 @@ color: rgb(85, 255, 0);</string>
           <item>
            <widget class="QPushButton" name="startButton">
             <property name="text">
-             <string>Start</string>
+             <string>&amp;Start</string>
             </property>
             <property name="icon">
              <iconset resource="icons.qrc">
