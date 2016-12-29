@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "worker.h"
+#include "styles.h"
 #include <QTime>
 #include <QThread>
 #include <QDebug>
-
+#include <QPainter>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -20,8 +21,23 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&workerThread, SIGNAL (finished()), &workerThread, SLOT (deleteLater()));
     this->setWindowFlags(Qt::WindowStaysOnTopHint);
 
+    int id = QFontDatabase::addApplicationFont(":/fonts/fonts/em_rockwell.ttf");
+    QFont font;
+    QString family = QFontDatabase::applicationFontFamilies(id).at(0);
+    font.setFamily(family);
+    font.setPointSize(48);
+    ui->gobLCD->setFont(font);
+
+    font.setPointSize(36);
+    ui->gobLapTextArea->setFont(font);
+
     workerThread.start();
     this->statusBar()->showMessage(tr("www.gtronick.com"));
+
+    //Styles *lobStyle = new Styles;
+    this->setStyleSheet(Styles::getElegantGnomeStyle());
+    this->setWindowFlags(Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint);
+    ui->windowTittleLabel->installEventFilter(this);
 }
 
 MainWindow::~MainWindow()
@@ -70,4 +86,43 @@ void MainWindow::on_clearLapsButton_clicked()
 {
     ui->gobLapTextArea->clear();
     lapCounter = 0;
+}
+
+void MainWindow::on_closeWindowButton_clicked()
+{
+    QApplication::exit();
+}
+
+void MainWindow::on_restoreWindowButton_clicked()
+{
+    this->showMinimized();
+}
+
+void MainWindow::on_restoreWindowButton_2_clicked()
+{
+    if(!this->isMaximized()){
+        this->showMaximized();
+    }
+    else this->showNormal();
+}
+
+void MainWindow::mousePressEvent(QMouseEvent *event) {
+    m_nMouseClick_X_Coordinate = event->x();
+    m_nMouseClick_Y_Coordinate = event->y();
+}
+
+void MainWindow::mouseMoveEvent(QMouseEvent *event) {
+    this->repaint();
+    move(event->globalX()-m_nMouseClick_X_Coordinate,event->globalY()-m_nMouseClick_Y_Coordinate);
+}
+
+bool MainWindow::eventFilter(QObject *obj, QEvent *event)
+{
+    if (obj == (QObject*)ui->windowTittleLabel) {
+        if (event->type() == QEvent::MouseButtonDblClick){
+            this->on_restoreWindowButton_2_clicked();
+        }
+    }
+
+    return QWidget::eventFilter(obj, event);
 }
