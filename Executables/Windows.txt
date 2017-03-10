@@ -1,6 +1,0 @@
-
-#Windows package ready for deploy
-
-The QChrono_Windows.zip package includes the .exe file and the requiered dlls for deploy. 
-
-Extract the files and run the QChrono.exe file.
