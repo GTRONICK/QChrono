@@ -33,8 +33,14 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Name...</string>
         </property>
        </widget>
       </item>
@@ -184,6 +190,14 @@ color: rgb(85, 255, 0);</string>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>startButton</tabstop>
+  <tabstop>flagButton</tabstop>
+  <tabstop>resetButton</tabstop>
+  <tabstop>clearLapsButton</tabstop>
+  <tabstop>gobLapTextArea</tabstop>
+  <tabstop>tittleLineEdit</tabstop>
+ </tabstops>
  <resources>
   <include location="icons.qrc"/>
  </resources>
