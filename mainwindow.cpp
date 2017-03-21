@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QString StyleSheet = QLatin1String(styleFile.readAll());
     this->setStyleSheet(StyleSheet);
     this->setWindowFlags(Qt::WindowStaysOnTopHint);
+
 }
 
 MainWindow::~MainWindow()
