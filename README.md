@@ -5,7 +5,7 @@ Simple Qt5 Chronometer
 
 QChrono, is a simple QT application that serves as a chronometer with lap capture. 
 
-#How to Build
+# How to Build
 
 1. Download the source code and images.
 2. Extract the files and run:
@@ -15,7 +15,7 @@ QChrono, is a simple QT application that serves as a chronometer with lap captur
 
 If this dont work, try using QTCreator and open the TestJQ.pro file. Configure the project, build, and launch in release mode.
 
-#How to use
+# How to use
 
 1. Click the Start button to start the chrono.
 2. Click the Lap button, to save the current time in the lap viewer.
