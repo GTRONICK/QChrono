@@ -23,5 +23,3 @@ If this dont work, try using QTCreator and open the TestJQ.pro file. Configure t
 4. Click the Clear Laps button, to clear the lap viewer.
 5. Enter any text in the "Name..." line to add a custom name to each instance. This is useful for differentiate multiple instances
    running at the same time.
-
-Report any bug or suggestion to contact@gtronick.com
