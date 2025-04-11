@@ -1,7 +1,8 @@
 # QChrono
 Simple Qt5 Chronometer
 
-![QChrono_GUI](https://sites.google.com/site/gtronick/QChrono1.0.PNG)
+![image](https://github.com/user-attachments/assets/e2760631-bf0d-42da-9888-e6d912d85ea9)
+
 
 QChrono, is a simple QT application that serves as a chronometer with lap capture. 
 
